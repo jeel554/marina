@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #e0e5ec;
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: auto;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .card {
+            width: 380px;
+            background: #e0e5ec;
+            border-radius: 30px;
+            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.6), -6px -6px 12px rgba(255, 255, 255, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .card-content {
+            padding: 30px;
+            background: #e0e5ec;
+        }
+
+        .card-content h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(163, 177, 198, 0.5);
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #5a6c7d;
+            line-height: 1.7;
+            padding: 20px;
+            background: #e0e5ec;
+            border-radius: 15px;
+            box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+        
+        
+        @media (max-width: 1025px) {
+            
+            .card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .card-content {
+                padding: 25px;
+                background: #e0e5ec;
+            }
+
+            .card-content h2 {
+                color: #2c3e50;
+                font-size: 30px;
+                margin-bottom: 24px;
+                font-weight: 600;
+                text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(163, 177, 198, 0.5);
+            }
+
+            .card-content p {
+                font-size: 22px;
+                color: #5a6c7d;
+                line-height: 1.6;
+                padding: 25px;
+                background: #e0e5ec;
+                border-radius: 15px;
+                box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+            }
+
+        }
+
+        @media (max-width: 769px) {
+            
+            .card img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .card-content {
+                padding: 22px;
+                background: #e0e5ec;
+            }
+
+            .card-content h2 {
+                color: #2c3e50;
+                font-size: 26px;
+                margin-bottom: 22px;
+                font-weight: 600;
+                text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(163, 177, 198, 0.5);
+            }
+
+            .card-content p {
+                font-size: 18px;
+                color: #5a6c7d;
+                line-height: 1.6;
+                padding: 22px;
+                background: #e0e5ec;
+                border-radius: 15px;
+                box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+            }
+
+        }
+        
+        @media (max-width: 426px) {
+            
+            .card img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .card-content {
+                padding: 20px;
+                background: #e0e5ec;
+            }
+
+            .card-content h2 {
+                color: #2c3e50;
+                font-size: 22px;
+                margin-bottom: 22px;
+                font-weight: 600;
+                text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(163, 177, 198, 0.5);
+            }
+
+            .card-content p {
+                font-size: 16px;
+                color: #5a6c7d;
+                line-height: 1.5;
+                padding: 20px;
+                background: #e0e5ec;
+                border-radius: 15px;
+                box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+            }
+
+        }
+
+        @media (max-width: 376px) {
+            
+            .card img {
+                width: 100%;
+                height: 140px;
+                object-fit: cover;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .card-content {
+                padding: 15px;
+                background: #e0e5ec;
+            }
+
+            .card-content h2 {
+                color: #2c3e50;
+                font-size: 20px;
+                margin-bottom: 20px;
+                font-weight: 600;
+                text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(163, 177, 198, 0.5);
+            }
+
+            .card-content p {
+                font-size: 14px;
+                color: #5a6c7d;
+                line-height: 1.4;
+                padding: 15px;
+                background: #e0e5ec;
+                border-radius: 15px;
+                box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+            }
+
+        }
+
+        @media (max-width: 320px) {
+
+            .card img {
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 30px 30px 0 0;
+            }
+
+            .card-content {
+                padding: 10px;
+                background: #e0e5ec;
+            }
+
+            .card-content h2 {
+                color: #2c3e50;
+                font-size: 15px;
+                margin-bottom: 15px;
+                font-weight: 600;
+                text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(163, 177, 198, 0.5);
+            }
+
+            .card-content p {
+                font-size: 10px;
+                color: #5a6c7d;
+                line-height: 1.4;
+                padding: 10px;
+                background: #e0e5ec;
+                border-radius: 15px;
+                box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://i.ibb.co/hMtcwNb/solar1.jpg">
+            <div class="card-content">
+                <h2>Solar Residential Rooftop</h2>
+                <p>
+                    Our residential rooftop solar systems are tailored to the energy needs
+                    of modern homes. Using advanced technology and high-quality components,
+                    we design and install systems that reduce electricity bills, increase energy
+                    independence, and ensure safety. Each system is customized to match your
+                    rooftop structure, energy usage patterns, and budget — giving homeowners
+                    a reliable and eco-friendly energy solution.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://i.ibb.co/VvPZXc7/solar2.jpg">
+            <div class="card-content">
+                <h2>Solar Industrial Rooftop</h2>
+                <p>
+                    For industries and commercial establishments, we offer industrial rooftop
+                    solar solutions that maximize energy generation while optimizing available
+                    roof space. These systems are designed for high efficiency, durability, and
+                    scalability, enabling businesses to significantly cut operational costs, meet
+                    sustainability targets, and enjoy long-term energy security.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://i.ibb.co/9W8TB1C/solar3.jpg">
+            <div class="card-content">
+                <h2>Large-Scale Ground-Mounted Projects</h2>
+                <p>
+                    Our large-scale ground-mounted solar projects are ideal for utilities, developers,
+                    and large enterprises seeking high-capacity, long-lasting solar power solutions.
+                    Engineered with precision and designed for optimal energy output, these systems
+                    provide stable, eco-friendly energy over decades. We handle every aspect — from
+                    feasibility studies and design to installation, commissioning, and maintenance
+                    ensuring your investment delivers maximum returns.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
